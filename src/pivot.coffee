@@ -546,6 +546,8 @@ callWithJQuery ($) ->
                     th.setAttribute("rowspan", x)
                     if parseInt(j) == rowAttrs.length-1 and colAttrs.length !=0
                         th.setAttribute("colspan",2)
+                    if getClickHandler?
+                        th.onclick = getClickHandler(val, rowKey, colKey)    
                     tr.appendChild th
             for own j, colKey of colKeys #this is the tight loop
                 aggregator = pivotData.getAggregator(rowKey, colKey)
@@ -579,6 +581,8 @@ callWithJQuery ($) ->
                 th.className = "pvtTotalLabel pvtColTotalLabel"
                 th.innerHTML = opts.localeStrings.totals
                 th.setAttribute("colspan", rowAttrs.length + (if colAttrs.length == 0 then 0 else 1))
+                if getClickHandler?
+                    th.onclick = getClickHandler(val, [], colKey)
                 tr.appendChild th
             for own j, colKey of colKeys
                 totalAggregator = pivotData.getAggregator([], colKey)

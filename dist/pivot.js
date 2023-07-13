@@ -1054,6 +1054,9 @@
             if (parseInt(j) === rowAttrs.length - 1 && colAttrs.length !== 0) {
               th.setAttribute("colspan", 2);
             }
+            if (getClickHandler != null) {
+              th.onclick = getClickHandler(val, rowKey, colKey);
+            }
             tr.appendChild(th);
           }
         }
@@ -1093,6 +1096,9 @@
           th.className = "pvtTotalLabel pvtColTotalLabel";
           th.innerHTML = opts.localeStrings.totals;
           th.setAttribute("colspan", rowAttrs.length + (colAttrs.length === 0 ? 0 : 1));
+          if (getClickHandler != null) {
+            th.onclick = getClickHandler(val, [], colKey);
+          }
           tr.appendChild(th);
         }
         for (j in colKeys) {

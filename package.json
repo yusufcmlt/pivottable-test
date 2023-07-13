@@ -1,6 +1,6 @@
 {
-  "name": "pivottable",
-  "version": "2.23.0",
+  "name": "pivottable-test",
+  "version": "2.23.1",
   "description": "Javascript Pivot Table (aka Pivot Grid, Pivot Chart, Cross-Tab) implementation with drag'n'drop",
   "main": "dist/pivot.js",
   "files": [
@@ -20,14 +20,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/nicolaskruchten/pivottable.git"
+    "url": "git://github.com/yusufcmlt/pivottable-test.git"
   },
   "author": "Nicolas Kruchten",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nicolaskruchten/pivottable/issues"
+    "url": "https://github.com/yusufcmlt/pivottable-test/issues"
   },
-  "homepage": "https://github.com/nicolaskruchten/pivottable",
+  "homepage": "https://github.com/yusufcmlt/pivottable-test",
   "dependencies": {
     "jquery": ">=1.9.0"
   },
